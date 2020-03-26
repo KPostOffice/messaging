@@ -41,12 +41,12 @@ MESSAGE_BASE_TOPIC = "thoth.base-topic"
 class MessageBase:
     """Class used for Package Release events on Kafka topic."""
 
-    ssl_context = ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH, cafile=KAFKA_CAFILE)
+    # ssl_context = ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH, cafile=KAFKA_CAFILE)
     app = faust.App(
         "thoth-messaging",
         broker=KAFKA_BOOTSTRAP_SERVERS,
         value_serializer="json",
-        ssl_context=ssl_context,
+        # ssl_context=ssl_context,
     )
 
     def __init__(
