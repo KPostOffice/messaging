@@ -51,3 +51,15 @@ Data is not persistent. Once pods are deleted so is the data associated with the
 *Note*
 Faust producers and consumers can't be run by calling `$ python producer.py`, instead they are Faust specific applications,
 in order to run them you need to call `faust -A <filename> <function> [options]`
+
+Environment Variable Options
+############################
+* **THOTH_DEPLOYMENT_NAME**: namespace where messaging is being used. It is prepended to message names to keep messages from
+  overlapping
+* **KAFKA_CLIENT_ID**: id used when talking to Kafka
+* **KAFKA_SSL_AUTH**: this is binary, with 0 indicating SSL is not being used and any other input indicating Kafka is expecting
+  SSL authorization
+* **KAFKA_BOOTSTRAP_SERVERS**: address of Kafka bootstrap Servers
+* **KAFKA_CAFILE**: location of the file containing the Kafka CA certificate, this is only required if KAFKA_SSL is true
+* **THOTH_MESSAGING_DB_LOCATION**: causes Faust to use persistent memory rather than RAM. Pass the directory where Faust should
+  store its data.
