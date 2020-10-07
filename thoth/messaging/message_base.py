@@ -81,7 +81,7 @@ class MessageBase:
             value_type=self.value_type,
             retention=self.topic_retention_time_second,
             partitions=self.num_partitions,
-            internal=True,
+            internal=False,
         )
 
     def start_app(self):
