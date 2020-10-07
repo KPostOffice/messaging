@@ -103,6 +103,7 @@ class MessageBase:
                 ssl_context=self.ssl_context,
                 store="rocksdb://",
                 datadir=db_store,
+                stream_wait_empty=False,
             )
         MessageBase.app = app
 
