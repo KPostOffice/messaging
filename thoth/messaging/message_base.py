@@ -104,6 +104,8 @@ class MessageBase:
                 store="rocksdb://",
                 datadir=db_store,
                 stream_wait_empty=False,
+                broker_request_timeout_ms=500.0,
+                broker_max_poll_interval=2000.0,
             )
         MessageBase.app = app
 
