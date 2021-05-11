@@ -24,6 +24,7 @@ import os
 # and add them to these dictionaries
 
 confluent_config = {
+    "auto.offset.reset": ("KAFKA_AUTO_OFFSET_RESET", str),
     "bootstrap.servers": ("KAFKA_BOOTSTRAP_SERVERS", str),
     "client.id": ("KAFKA_CLIENT_ID", str),
     "message.max.bytes": ("KAFKA_MESSAGE_MAX_BYTES", int),

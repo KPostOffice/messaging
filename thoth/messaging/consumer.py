@@ -40,6 +40,7 @@ def subscribe_to_all(consumer: Consumer):
     for i in ALL_MESSAGES:
         to_subscribe.append(i.topic_name)
 
+    print(to_subscribe)
     consumer.subscribe(to_subscribe)
 
 
